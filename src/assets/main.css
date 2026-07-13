@@ -7,7 +7,6 @@
 }
 
 body {
-  min-height: 100vh;
   line-height: 1.5;
   font-family:
     system-ui,
@@ -19,6 +18,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#app {
-  min-height: 100vh;
+html, body, #app, main {
+  height: 100%;
 }

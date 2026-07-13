@@ -1,5 +1,48 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { AgGridVue } from 'ag-grid-vue3'
+import { ref } from 'vue'
+import type { ColDef } from "ag-grid-community";
+
+
+interface IRow {
+
+  make: string;
+  model: string;
+  price: number;
+  electric: boolean;
+}
+
+const rowData = ref<IRow[]>([
+  { make: "Tesla", model: "Model Y", price: 64950, electric: true },
+  { make: "Ford", model: "F-Series", price: 33850, electric: false },
+  { make: "Toyota", model: "Corolla", price: 29600, electric: false },
+  { make: "Mercedes", model: "EQA", price: 48890, electric: true },
+  { make: "Fiat", model: "500", price: 15774, electric: false },
+  { make: "Nissan", model: "Juke", price: 20675, electric: false },
+]);
+
+
+const columnDefs = ref<ColDef<IRow>[]>([
+  { field: "make" },
+  { field: "model" },
+  { field: "price" },
+  { field: "electric" },
+])
+
+const defaultColDef = {
+  flex: 1,
+}
+
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <ag-grid-vue
+        style="width: 100%; height: 100%"
+        :columnDefs="columnDefs"
+        :rowData="rowData"
+        :defaultColDef="defaultColDef"
+    >
+    </ag-grid-vue>
+  </main>
 </template>
