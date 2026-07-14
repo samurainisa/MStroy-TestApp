@@ -2,9 +2,11 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community'
-import { TreeDataModule } from 'ag-grid-enterprise'
+import { ModuleRegistry } from 'ag-grid-community'
+import { AllEnterpriseModule } from 'ag-grid-enterprise'
 
-ModuleRegistry.registerModules([AllCommunityModule, TreeDataModule])
+ModuleRegistry.registerModules([
+  AllEnterpriseModule,
+])
 
 createApp(App).mount('#app')
