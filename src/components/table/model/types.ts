@@ -1,4 +1,4 @@
-import type { TreeItem } from '@/tree-store'
+import type { TreeItem } from '@/store/tree-store'
 
 export interface VisibleTreeItem extends TreeItem {
   depth: number

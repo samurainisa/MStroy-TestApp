@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import AgGrid from '@/components/table/AgGrid.vue'
-import { TreeStore, items } from '@/tree-store'
+import { TreeStore, items } from '@/store/tree-store'
 
 const store = new TreeStore(items.map((item) => ({ ...item })))
 </script>

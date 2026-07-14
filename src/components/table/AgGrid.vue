@@ -14,7 +14,7 @@ import {
   items,
   type TreeItem,
   type TreeItemId,
-} from '@/tree-store'
+} from '@/store/tree-store'
 
 import type { VisibleTreeItem } from './model/types'
 

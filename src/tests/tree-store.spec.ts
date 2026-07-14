@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { TreeStore, items, type TreeItem } from '@/tree-store'
+import { TreeStore, items, type TreeItem } from '@/store/tree-store'
 
 describe('TreeStore', () => {
   let store: TreeStore
